@@ -1,0 +1,33 @@
+.myrecipes {
+	padding: 10px;
+	padding-left: 15px;
+	border-collapse: collapse;
+}
+
+#recipes {
+  text-align: center;
+  font-family: sans-serif;
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+}
+
+#recipes td, #recipes th {
+  border: none;
+  padding: 9px;
+  border-radius: 8px;
+}
+
+#recipes tr:nth-child(even){background-color: #f2f2f2;}
+
+#recipes tr:hover {background-color: pink;}
+
+#recipes th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #0066FF;
+  color: white;
+  
+}
