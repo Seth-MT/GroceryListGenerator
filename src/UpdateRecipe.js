@@ -63,7 +63,7 @@ class UpdateRecipe extends Component {
 
     handleUpdateRecipe = async () => {
         const { id, name, cost, ingredient } = this.state
-        const arrayIngredient = ingredient.split('/')
+        const arrayIngredient = ingredient.split(',')
         const payload = { name, cost, ingredient: arrayIngredient }
 
         await api.updateRecipeById(id, payload).then(res => {
@@ -83,7 +83,7 @@ class UpdateRecipe extends Component {
         this.setState({
             name: recipe.data.data.name,
             cost: recipe.data.data.cost,
-            ingredient: recipe.data.data.ingredient.join('/'),
+            ingredient: recipe.data.data.ingredient.join(','),
         })
     }
 

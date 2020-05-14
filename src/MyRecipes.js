@@ -67,7 +67,7 @@ class MyRecipes extends Component {
 				<tr key = {_id}>
 					<td>{name}</td>
 					<td>{cost}</td>
-					<td>{ingredient.join("\n")}</td>
+					<td>{ingredient.join(", ")}</td>
 					<td><DeleteRecipe id = {_id} /></td>
 					<td><UpdateRecipe id = {_id} /></td>
 				</tr>

@@ -68,6 +68,8 @@ class LoginUser extends Component {
 
         await api3.loginUser(payload).then(res => {
             window.alert(`Logged In`)
+			window.location.href = `/recipes/myrecipes`
+	
             this.setState({
                 name: '',
                 pass: '',

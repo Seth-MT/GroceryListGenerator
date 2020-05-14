@@ -47,7 +47,8 @@ loadCatalogue = async (req, res) => {
 		let outputList = catalogue.filter((catalogue, index, self) =>
 			index === self.findIndex((t) => (t.save === catalogue.save && t.name === catalogue.name)))
 		
-
+		outputList = outputList.sort();
+		
         return res.status(200).json({ success: true, data: outputList });
     }).catch(err => console.log(err))
 }
