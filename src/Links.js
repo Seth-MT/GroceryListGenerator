@@ -39,6 +39,11 @@ class Links extends Component {
 								Catalogue
 							</Link>
 						</Item>
+						<Item>
+							<Link to = "/user/login" className = "nav-link">
+								Log In
+							</Link>
+						</Item>
                     </List>
                 </Collapse>
             </React.Fragment>

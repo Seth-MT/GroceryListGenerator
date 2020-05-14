@@ -10,6 +10,8 @@ import MyRecipes from "./MyRecipes";
 import CreateRecipe from "./CreateRecipe";
 import UpdateRecipe from "./UpdateRecipe";
 import Catalogue from "./Catalogue";
+import LoginUser from "./LoginUser";
+import CreateUser from "./CreateUser";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Main() {
@@ -22,6 +24,8 @@ function Main() {
 				<Route path = "/recipes/create" exact component = {CreateRecipe}/>
 				<Route path = "/catalogue" exact component = {Catalogue}/>
 				<Route path = "/recipes/update/:id" exact component = {UpdateRecipe}/>
+				<Route path = "/user/login" exact component = {LoginUser}/>
+				<Route path = "/user/register" exact component = {CreateUser}/>
 			</Switch>
 		</Router>
 	);
