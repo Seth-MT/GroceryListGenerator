@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import api from "./api";
 import "./MyRecipes.css";
+import axios from "axios";
 
 const Delete = styled.div`
     color: red;
@@ -50,12 +51,13 @@ class MyRecipes extends Component {
 	}
 	
 	componentDidMount = async () => {
-        this.setState({ isLoading: true })
-
-        await api.getAllRecipes().then(response => {
-            this.setState({
-                recipes: response.data.data,
-                isLoading: false,
+		axios
+			.get('/recipes')
+			.then((response) => {
+				
+				this.setState({
+					recipes: response.data.data,
+					isLoading: false,
             })
         })
     }
